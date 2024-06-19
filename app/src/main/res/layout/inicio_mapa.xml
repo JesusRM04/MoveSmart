@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicioMapa">
+
+    <!-- Fondo con una imagen -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo" />
+
+    <!-- Título "Move Smart" -->
+    <TextView
+        android:id="@+id/move_smart_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MOVE SMART"
+        android:textSize="36sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/portersans"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/move_smart_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/move_smart_title"
+        android:layout_marginTop="64dp"
+        android:textStyle="bold"
+        android:text="¿A dónde quieres ir?"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/move_smart_title2"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:drawableLeft="@drawable/search"
+        android:hint="Buscar..."
+        android:textColor="@android:color/black"
+        android:background="@drawable/rounded_corners"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColorHint="@android:color/darker_gray"/>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/search"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_corners"
+        tools:context=".MapsActivity" />
+
+        <!-- Contenedor de iconos -->
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!-- Fondo con una imagen -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título "Move Smart" -->
+    <TextView
+        android:id="@+id/move_smart_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MOVE SMART"
+        android:textSize="36sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/portersans"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        />
+
+
+    <!-- Contenedor con fondo blanco -->
+    <LinearLayout
+        android:id="@+id/container_linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/rounded_corners"        android:orientation="vertical"
+        android:padding="16dp"
+
+        app:layout_constraintTop_toBottomOf="@id/move_smart_title"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="Logo"
+            android:src="@drawable/logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- LinearLayout para botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <!-- Botones de Registrarse y Acceder -->
+            <Button
+                android:id="@+id/btn_acceder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_selected_background"
+                android:text="ACCEDER"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_registrarse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_unselected_background"
+                android:text="REGISTRARSE"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!-- Texto "Bienvenido a MoveSmart" -->
+        <TextView
+            android:id="@+id/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido a MoveSmart"
+            android:textStyle="bold"
+            android:textSize="23sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp" />
+
+        <!-- Campos de correo electrónico y contraseña -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/white"
+            android:hint="Correo Electrónico"
+            android:inputType="textEmailAddress"
+            android:padding="10dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/email"
+            app:layout_constraintStart_toStartOf="@id/email"
+            app:layout_constraintEnd_toEndOf="@id/email" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/password"
+            app:layout_constraintStart_toStartOf="@id/password"
+            app:layout_constraintEnd_toEndOf="@id/password" />
+        <!-- Botón Acceder -->
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_selected_background"
+            android:text="ACCEDER"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/white" />
+
+        <!-- TextView para "Olvidaste tu contraseña?" -->
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="¿Olvidaste tu contraseña?"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

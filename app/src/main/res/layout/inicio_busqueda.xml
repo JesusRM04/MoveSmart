@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicioBusqueda">
+
+    <!-- Fondo con una imagen -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondo" />
+
+    <!-- Título "Move Smart" -->
+    <TextView
+        android:id="@+id/move_smart_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MOVE SMART"
+        android:textSize="36sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="@font/portersans"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/move_smart_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/move_smart_title"
+        android:layout_marginTop="64dp"
+        android:textStyle="bold"
+        android:text="¿A dónde quieres ir?"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/move_smart_title2"
+        android:drawableLeft="@drawable/search"
+        android:hint="Buscar..."
+        android:textColor="@android:color/black"
+        android:background="#FFFFFF"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColorHint="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:id="@+id/container_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:background="@drawable/fondo_inicio_busqueda"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_below="@id/search">
+
+        <EditText
+            android:id="@+id/ruta"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/move_smart_title2"
+            android:drawableLeft="@drawable/ellipsis_h"
+            android:hint="   Buscar una ruta"
+            android:textColor="@android:color/black"
+            android:background="#FFFFFF"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColorHint="@android:color/darker_gray"/>
+
+        <Button
+            android:id="@+id/elegirMapa"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="40dp"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/map_marker"
+            android:hint=" Elegir en el mapa"/>
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="RECIENTES"
+            android:drawableRight="@drawable/ellipsis_v"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawableLeft="@drawable/directions_bus"
+            android:drawableRight="@drawable/star"
+            android:background="#FFFFFF"
+            android:text="Avenida aguascalientes oriente 920"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="150dp"
+            android:layout_height="40dp"
+            android:text="¿No encontrase lo que estabas buscado?"
+            android:gravity="center"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="ENCUENTRA EN EL MAPA"
+            android:gravity="center"
+            android:textColor="#5420DC"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <!-- Contenedor de iconos -->
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/fondo_gray">
+
+        <!-- Icono de casa -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="Home"
+            android:src="@drawable/home" />
+
+        <!-- Icono de semáforo -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/traffic"
+            android:contentDescription="Traffic Light" />
+
+        <!-- Icono de autobús -->
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/directions_bus"
+            android:contentDescription="Bus" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/uno"
+        android:title="Home"
+        android:background="@android:color/white"
+        android:orderInCategory="100"
+        android:icon="@drawable/home" />
+    <item
+        android:id="@+id/dos"
+        android:background="@android:color/white"
+        android:title="Rutas"
+        android:orderInCategory="100"
+        android:icon="@drawable/traffic" />
+    <item
+        android:id="@+id/tres"
+        android:title="Ver rutas"
+        android:background="@android:color/white"
+        android:orderInCategory="100"
+        android:icon="@drawable/directions_bus" />
+</menu>
