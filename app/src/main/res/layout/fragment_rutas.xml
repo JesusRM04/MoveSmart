@@ -7,6 +7,13 @@
     tools:context=".MapaFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <fragment
+        android:id="@+id/rutas"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RutasFragment" />
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="0dp"
