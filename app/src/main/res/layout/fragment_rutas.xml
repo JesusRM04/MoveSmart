@@ -1,14 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MapaFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fondo" />
+
+        <!-- Título "Move Smart" -->
+        <TextView
+            android:id="@+id/move_smart_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/portersans"
+            android:text="MOVE SMART"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/move_smart_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/move_smart_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="94dp"
+            android:layout_marginTop="100dp"
+            android:text="¿A dónde quieres ir?"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/move_smart_title2"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/rounded_corners"
+            android:drawableLeft="@drawable/search"
+            android:hint="Buscar..."
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal">
+
+            <?xml version="1.0" encoding="utf-8"?>
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="4dp">
+
+                <ImageView
+                    android:id="@+id/background_image1"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ruta" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="130dp"
+                    android:backgroundTint="#f5f5dc"
+                    android:gravity="center_horizontal"
+                    android:text="Consultar \n Horarios"
+                    android:textSize="20sp">
+
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+            <?xml version="1.0" encoding="utf-8"?>
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="170dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="100dp"
+                android:backgroundTint="#f5f5dc"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="4dp">
+
+                <ImageView
+                    android:id="@+id/background_image2"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ruta" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="130dp"
+                    android:gravity="center_horizontal"
+                    android:text="Consultar \n Horarios"
+                    android:textSize="20sp">
+
+                </TextView>
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="580dp"
+            android:background="@drawable/button_background"
+            android:drawableEnd="@drawable/ic_arrow_up"
+            android:drawablePadding="8dp"
+            android:padding="16dp"
+            android:text="Ver todas las rutas"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#201D1D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
